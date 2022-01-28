@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "pact",
+  "version": "1.0.0",
+  "description": "Pact excercise",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production --config webpack.config.js",
+    "watch": "webpack --mode=development --config webpack.config.js --watch",
+    "lint:scripts": "eslint -c .eslintrc 'app/scripts/**/*'",
+    "lint:scripts:fix": "npm run lint:scripts -- --fix",
+    "lint:styles": "stylelint 'app/styles/**/*.scss'",
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "release:major": "npm version major",
+    "release:minor": "npm version minor",
+    "release:patch": "npm version patch",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-watch-files-plugin": "^1.2.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/runtime": "^7.16.7",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "regenerator-runtime": "^0.13.9",
+    "swiper": "^7.4.1"
+  }
+}
