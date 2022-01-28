@@ -1,0 +1,14 @@
+<section class="latest-stories">
+    <div class="heading">
+        <h2>{{ collections['latest-stories'].title }}</h2>
+    </div>
+    <div class="slider">
+        {% for product in collections.latest-stories.products %}
+            <article>
+                <img src="{{ product.featured_image | product_img_url: '600x' }}" alt="{{ product.title | escape  }}" />    
+                <p class="product-type">{{ product.type }}</p>
+                <p class="product-description">{{ product.description }}</p>
+            </article>
+        {% endfor %}
+    </div>
+</section>
