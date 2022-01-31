@@ -1,0 +1,18 @@
+
+<section id="latest-stories" class="swiper">
+    <div class="heading-wrap">
+        <h1 id="stories-heading" class="heading">{{ collections['latest-stories'].title }}</h1>
+    </div>
+    <div class="slider swiper-wrapper">
+        {% for product in collections.latest-stories.products %}
+            <article class="swiper-slide">
+                <img src="{{ product.featured_image | product_img_url: '600x' }}" alt="{{ product.title | escape  }}" />    
+                <p class="category">{{ product.type }}</p>
+                <p class="description">{{ product.description }}</p>
+            </article>
+        {% endfor %}
+    </div>
+    <div id="custom-cursor" class="slider-cursor white-circle"></div>
+</section>
+
+

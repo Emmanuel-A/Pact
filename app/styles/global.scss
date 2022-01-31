@@ -1,0 +1,134 @@
+html {
+    background-color: $charcoal;
+    
+    // Base font size - based on device screen size
+    font-size: calc(100vw / 1920 * 10);
+
+    @media (max-width: $md) {
+        font-size: calc(100vw / 1200 * 10);
+    }
+    @media (max-width: $sm) {
+        font-size: calc(100vw / 900 * 10);
+    }
+    @media (max-width: $xs) {
+        font-size: calc(100vw / 500 * 10);
+    }
+    body {
+        @include body-background;
+        #shopify-section-page-heading {
+            padding: 20rem 10rem 0 10rem;
+            @media screen and (max-width: $sm) {
+                padding-bottom: 5rem;
+            }
+            @media screen and (max-width: $xs) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                padding-top: 10rem;
+                padding-bottom: 0;
+            }
+            .page-heading {
+                .heading-wrap {
+                    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, $darkgray, transparent, transparent);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    @include reveal-and-glow;
+                    .heading {
+                        @include heading;
+                        color: transparent;
+                        text-indent: 3em;
+                        @media screen and (max-width: $md) {
+                            font-size: 4.2rem;
+                        }   
+                        @media screen and (max-width: $sm) {
+                            font-size: 5rem;
+                            text-indent: 3em;
+                        }      
+                        @media screen and (max-width: $xs) {
+                            font-size: 3rem;
+                            text-indent: 0;
+                        }                      
+                    }
+                }
+            }
+        }
+        #shopify-section-pre-footer {
+            margin: 0 auto;
+            padding: 0 5rem 15rem 5rem;
+            @media screen and (max-width: $xs) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            .pre-footer {
+                background-color: $aqua;
+                padding: 3.5em 1.8em;
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: 50% 40%;
+                grid-column-gap: 10%;
+                @media screen and (max-width: $md) {
+                    grid-template-columns: 59% 40%;
+                    grid-column-gap: 1%;
+                }
+                @media screen and (max-width: $sm) {
+                    grid-template-columns: 100%;
+                }
+                @media screen and (max-width: $xs) {
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                    padding-top: 8rem;
+                    padding-bottom: 8rem;
+                }
+                .heading-wrap {
+                    @media screen and (max-width: $sm) {
+                        margin: 0 0 3rem 0;
+                    }
+                    .heading {
+                        @include heading;
+                        @media screen and (max-width: $md) {
+                            font-size: 5rem;
+                        }
+                        @media screen and (max-width: $sm) {
+                            font-size: 5.8rem;
+                        }        
+                        @media screen and (max-width: $xs) {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+                .content-wrap {
+                    .content {
+                        @include paragraph;
+                        max-width: 60rem;
+                        color: $black;
+                        line-height: 1.4em;
+                        margin: 0 0 4rem 0;
+                        font-size: 2rem;
+                        @media screen and (max-width: $md) {
+                            font-size: 1.8rem;
+                        }
+                        @media screen and (max-width: $sm) {
+                            font-size: 2.5rem;
+                            max-width: 100rem;
+                        }
+                        @media screen and (max-width: $xs) {
+                            font-size: 2rem;
+                        }
+                    }
+                    .cta-btn {
+                        @include cta-btn;
+                        @media screen and (max-width: $md) {
+                            font-size: 1.8rem;
+                        }
+                        @media screen and (max-width: $sm) {
+                            font-size: 2.5rem;
+                        }
+                        @media screen and (max-width: $xs) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

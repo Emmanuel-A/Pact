@@ -1,0 +1,45 @@
+<section class="pre-footer">
+  <div class="heading-wrap">
+    {% if section.settings.heading != blank %}
+      <p class="heading">{{ section.settings.heading }}</p>
+    {% endif %}
+  </div>
+  <div class="content-wrap">
+    {% if section.settings.content != blank %}
+      <p class="content">{{ section.settings.content }}</p>
+    {% endif %}
+    {% if section.settings.btnLink != blank %}
+      <a href="{{ section.settings.btnLink }}" class="cta-btn">{{ section.settings.btnText }}</a>
+    {% endif %}
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Pre Footer",
+  "settings": [
+    {
+      "label": "Heading",
+      "id": "heading",
+      "type": "textarea"
+    },
+    {
+      "label": "Content",
+      "id": "content",
+      "type": "textarea"
+    },
+    {
+      "label": "Button Link",
+      "id": "btnLink",
+      "type": "url"
+    },
+    {
+      "label": "Button Text",
+      "id": "btnText",
+      "type": "text"
+    }
+  ]
+}
+{% endschema %}
+

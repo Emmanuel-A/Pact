@@ -1,0 +1,120 @@
+@mixin body-background {
+    background-color: $charcoal;
+}
+
+@mixin circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@mixin heading {
+    font-family: $overpassblack;
+    text-transform: uppercase;
+    font-size: 7rem;
+    line-height: 1em;
+}
+
+@mixin subheading {
+    font-family: $overpassbold;
+}
+
+@mixin paragraph {
+    font-family: $overpassregular;
+}
+
+@mixin cta-btn {
+    text-transform: uppercase;
+    font-family: $overpassblack;
+    font-size: 2rem;
+    border: 1px solid $charcoal;
+    border-radius: 30px;
+    color: $charcoal;
+    padding: 1.5rem 3rem;
+    position: relative;
+    transition: 0.6s ease-in-out linear 1s;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block;
+        background-color: $charcoal;
+        border-radius: 50%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 8.34em;
+        transform: scale(0, 0);
+        transition: 0.4s;
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+    }
+    &:hover {
+        color: $aqua;
+        &:after {
+            transform: scale(1, 1);
+        }
+    }
+}
+
+@mixin shine-animation {
+    animation: shine 5s linear;
+    @keyframes shine {
+        0% {
+          background-position-x: -500%;
+          background-size: 30%;
+        }
+        100% {
+          background-position-x: 500%;
+          background-size: 100%;
+        }
+    }
+}
+
+@mixin reveal-and-glow {
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 3000ms ease-in-out forwards 2200ms;    
+    @keyframes glow {
+        40% {
+            text-shadow: 0 0 8px $white;
+        }
+    }
+    @keyframes reveal {
+        0% {
+            background-size: 0% 0%;
+        }
+        100% {
+            color: $darkgray;
+            background-size: 300% 300%;
+        }
+    }
+}
+
+@mixin shake-and-glow {
+    @media screen and (min-width: $sm) and (max-width: $xl) {
+        animation: shake 1s ease-in-out forwards 200ms infinite, glow 1000ms ease-in-out forwards 200ms infinite;    
+        @keyframes glow {
+            40% {
+                text-shadow: 0 0 8px $white;
+            }
+        }
+        @keyframes shake {
+            0% {
+                text-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+                transform: skew(0deg) scale(1) rotate(-90deg) translate(10px, 0px);
+            }
+            50% {
+                text-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+                transform: skew(0deg) scale(1.3) rotate(-90deg) translate(10px, 0px);
+            }
+            100% {
+                text-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+                transform: skew(0deg) scale(1) rotate(-90deg) translate(10px, 0px);
+            }
+        }
+    }
+}

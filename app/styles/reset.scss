@@ -1,0 +1,12 @@
+* {
+    outline: none;
+    &::selection {
+        background: transparent;
+      }
+    &::-moz-selection {
+        background: transparent;
+    }
+}
+.main-content {
+    padding: 0;
+}

@@ -1,0 +1,21 @@
+{% if section.settings.heading != blank %}
+  <section class="page-heading">
+    <div class="heading-wrap">
+      <p class="heading">{{ section.settings.heading }}</p>
+    </div>
+  </section>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Page Heading",
+  "settings": [
+    {
+      "label": "Heading",
+      "id": "heading",
+      "type": "textarea"
+    }
+  ]
+}
+{% endschema %}
