@@ -134,6 +134,21 @@
         "settings": {
           "show_payment_icons": true
         }
+      },
+      "page-heading": {
+        "type": "page-heading",
+        "settings": {
+          "heading": "OCCASIONALLY, WE OFFER PERSPECTIVES ON THE DIRECT-TO-CONSUMER LANDSCAPE, RETAIL INNOVATIONS, HAPPENINGS AROUND PACT AND THE ODD CREATIVE EXPERIMENT."
+        }
+      },
+      "pre-footer": {
+        "type": "pre-footer",
+        "settings": {
+          "heading": "",
+          "content": "",
+          "btnLink": "",
+          "btnText": ""
+        }
       }
     },
     "content_for_index": [
