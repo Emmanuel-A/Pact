@@ -1,0 +1,123 @@
+#latest-stories {
+    position: relative;
+    cursor: none;
+    display: grid;
+    grid-template-columns: 14% 96%;
+    padding: 10rem 0;
+    #custom-cursor {
+        @media screen and (max-width: $sm) {
+            visibility: hidden;
+        }
+        &.white-circle {
+            @include circle;
+            display: none;
+            position: absolute;
+            z-index: 9999;;
+            background-color: $white;
+            width: 100px;
+            height: 100px;
+            &:before {
+                content: "Drag";
+                text-transform: uppercase;
+                text-align: center;
+                position: absolute;
+                font-family: "overpassbold";
+                font-size: 14px;
+                font-weight: 700;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100%;
+                color: $black;
+            }
+        }
+    }
+    @media screen and (max-width: $sm) {
+        padding-top: 5rem;
+        grid-template-columns: 100%;
+    }
+    .swiper-wrapper {
+        align-items: baseline;
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            @media screen and (max-width: $sm) {
+                width: 40% !important;
+            }
+            @media screen and (max-width: $xs) {
+                width: 75% !important;
+            }
+            img {
+                padding: 0 0 4rem 0;
+            }
+            p {
+                color: $gray;
+                &.category {
+                    @include subheading;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    @media screen and (max-width: $sm) {
+                        font-size: 1.8rem;
+                    }
+                }
+                &.description {
+                    @include paragraph;
+                    font-size: 3.1rem;
+                    line-height: 1.3em;
+                    @media screen and (max-width: $md) {
+                        font-size: 2rem;
+                    }
+                    @media screen and (max-width: $sm) {
+                        font-size: 2.8rem;
+                    }
+                    @media screen and (max-width: $xs) {
+                        font-size: 2.5rem;                    
+                    }
+                }
+            }
+        }
+    }
+    .heading-wrap {
+        background-color: $charcoal;
+        z-index: 10;
+        position: relative;
+        @media screen and (max-width: $sm) {
+            padding: 0 10rem 3rem 10rem;
+        }
+        @media screen and (max-width: $xs) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        .heading {
+            @include paragraph;
+            margin: 0;
+            position: absolute;
+            top: 40%;
+            left: 0%;
+            -ms-transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            width: 100%;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-align: center;
+            @media screen and (max-width: $sm) {
+                width: 100%;
+                font-size: 2rem;
+                position: relative;
+                left: unset;
+                top: unset;
+                transform: none;
+                text-align: left;
+            }
+            @media screen and (max-width: $xs) {
+                font-size: 1.5rem;
+            }
+            &.shake-and-glow {
+                @include shake-and-glow;
+            }
+        }
+    }
+}

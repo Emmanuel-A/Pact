@@ -93,9 +93,9 @@
         font-style: normal;
     }
   </style>
-  
+
   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
-  {% comment %} {{ 'custom.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   <style>
     {{ header_font | font_face: font_display: 'swap' }}
@@ -229,6 +229,11 @@
 
   </div>
 
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+  </ul>
+
   <script type="application/json" data-cart-routes>
     {
       "cartUrl": "{{ routes.cart_url }}",
@@ -237,9 +242,7 @@
     }
   </script>
 
-  <ul hidden>
-    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
-  </ul>
+
+  <script src="{{ 'scripts.js' | asset_url }}"></script>  
 </body>
 </html>
