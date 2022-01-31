@@ -144,10 +144,10 @@
       "pre-footer": {
         "type": "pre-footer",
         "settings": {
-          "heading": "",
-          "content": "",
-          "btnLink": "",
-          "btnText": ""
+          "heading": "THE  INTERSECTION OF\nDESIGN, TECHNOLOGY\nAND BUSINESS.",
+          "content": "Pact takes a unique, team-like, and holistic approach to building direct-to-consumer businesses: we do more across a variety of touchpoints for fewer clients so that we can be accountable and flexible to all the road bumps that inherently come with building something new.",
+          "btnLink": "#",
+          "btnText": "Start Your Project With Pact"
         }
       }
     },
